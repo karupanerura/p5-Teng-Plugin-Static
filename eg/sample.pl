@@ -3,7 +3,7 @@ use warnings;
 use utf8;
 use 5.10.0;
 
-use eg::Static;
+use t::eg::Static;
 use Test::mysqld;
 
 my $mysqld = Test::mysqld->new(
@@ -13,7 +13,7 @@ my $mysqld = Test::mysqld->new(
 ) or die $Test::mysqld::errstr;
 
 my @connect_info = $mysqld->dsn(dbname => 'test');
-my $db = eg::Static->new(+{ connect_info => \@connect_info });
+my $db = t::eg::Static->new(+{ connect_info => \@connect_info });
 # $db->dbh->do(do { local $/; <DATA> });
 
 

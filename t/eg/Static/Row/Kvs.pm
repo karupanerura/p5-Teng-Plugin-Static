@@ -1,4 +1,4 @@
-package eg::Static::Row::Kvs;
+package t::eg::Static::Row::Kvs;
 use strict;
 use warnings;
 use utf8;

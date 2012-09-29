@@ -1,4 +1,4 @@
-package eg::Static::Schema;
+package t::eg::Static::Schema;
 use strict;
 use warnings;
 use utf8;
@@ -24,7 +24,7 @@ table {
         return $col_value unless ref $col_value;
         return $col_value->strftime('%Y-%m-%d %H:%M:%S');
     };
-    row_class 'eg::Static::Row::Kvs';
+    row_class 't::eg::Static::Row::Kvs';
 };
 
 1;

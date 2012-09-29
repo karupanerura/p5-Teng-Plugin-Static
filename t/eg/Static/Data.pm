@@ -1,4 +1,4 @@
-package eg::Static::Data;
+package t::eg::Static::Data;
 use strict;
 use warnings;
 use utf8;
