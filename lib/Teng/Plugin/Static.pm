@@ -46,7 +46,6 @@ sub load_data_from_class {
     }
     else {
         foreach my $table_name ( @{ Class::Inspector->methods($data_class => 'public') } ) {
-            warn $table_name;
             next if $table_name =~ /^(?:BEGIN|CHECK|END|import|unimport)$/;
             next if get_code_package( $data_class->can($table_name) ) ne $data_class;
 
